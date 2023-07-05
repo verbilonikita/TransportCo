@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, View } from "react-native";
+// localisation
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { LANGUAGE_RESOURCES } from "./src/localisation";
+// views
+import TabView from "./src/Views/TabView";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+i18n.use(initReactI18next).init({
+  resources: LANGUAGE_RESOURCES,
+  compatibilityJSON: "v3",
+  lng: "РУ",
+  interpolation: {
+    escapeValue: true,
   },
 });
+
+const App: React.FC = () => {
+  return (
+    <View style={{ flex: 1 }}>
+      <SafeAreaView />
+      <TabView />
+    </View>
+  );
+};
+
+export default App;

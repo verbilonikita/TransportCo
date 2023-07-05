@@ -1,0 +1,118 @@
+{
+  "cargo": [
+    {
+      "id": 1,
+      "type": "cargo",
+      "driver": "Валерий Сергеевич",
+      "transport_name": "#055534",
+      "phone_number": "7714234562",
+      "coords": {
+        "latitude": 55.72,
+        "longitude": 37.619
+      }
+    },
+    {
+      "id": 2,
+      "type": "cargo",
+      "driver": "Иван Петров",
+      "transport_name": "#018284",
+      "phone_number": "7714234563",
+      "coords": {
+        "latitude": 55.71,
+        "longitude": 37.62
+      }
+    },
+    {
+      "id": 3,
+      "type": "cargo",
+      "driver": "Алексей Иванов",
+      "transport_name": "#129384",
+      "phone_number": "7714234564",
+      "coords": {
+        "latitude": 55.723,
+        "longitude": 37.63
+      }
+    }
+  ],
+  "public": [
+    {
+      "id": 4,
+      "type": "public",
+      "driver": "Михаил Александрович",
+      "transport_name": "#018982",
+      "phone_number": "7714234565",
+      "coords": {
+        "latitude": 55.723,
+        "longitude": 37.64
+      }
+    },
+    {
+      "id": 5,
+      "type": "public",
+      "driver": "Елена Владимировна",
+      "transport_name": "#345674",
+      "phone_number": "7714234566",
+      "coords": {
+        "latitude": 55.73,
+        "longitude": 37.62
+      }
+    },
+    {
+      "id": 6,
+      "type": "public",
+      "driver": "Андрей Геннадьевич",
+      "transport_name": "#947584",
+      "phone_number": "7714234567",
+      "coords": {
+        "latitude": 55.75,
+        "longitude": 37.65
+      }
+    }
+  ],
+  "special": [
+    {
+      "id": 7,
+      "type": "special",
+      "driver": "Николай Сергеевич",
+      "transport_name": "#023415",
+      "phone_number": "7714234568",
+      "coords": {
+        "latitude": 55.756,
+        "longitude": 37.62
+      }
+    },
+    {
+      "id": 8,
+      "type": "special",
+      "driver": "Алиса Васильевна",
+      "transport_name": "#304829",
+      "phone_number": "7714234569",
+      "coords": {
+        "latitude": 55.76,
+        "longitude": 37.61
+      }
+    },
+    {
+      "id": 9,
+      "type": "special",
+      "driver": "Дмитрий Анатольевич",
+      "transport_name": "#192884",
+      "phone_number": "7714234570",
+      "coords": {
+        "latitude": 55.7,
+        "longitude": 37.61
+      }
+    },
+    {
+      "id": 10,
+      "type": "special",
+      "driver": "Илья Анатольевич",
+      "transport_name": "#1984",
+      "phone_number": "7714234570",
+      "coords": {
+        "latitude": 55.72,
+        "longitude": 37.61
+      }
+    }
+  ]
+}
