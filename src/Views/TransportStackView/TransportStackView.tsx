@@ -8,7 +8,7 @@ import {
   TransportStackViewTitleNames,
 } from "./TransportStackView.consts";
 import TransportInfoView from "./TransportInfoView/TransportInfoView";
-import TransportVehicleNavView from "./TransportVehicleNavView/TransportVehicleTabView";
+import TransportVehicleTabView from "./TransportVehicleTabView/TransportVehicleTabView";
 import { Stack, TransportStackViewContext } from "./TransportStackView.utils";
 
 const TransportStackView: React.FC = () => {
@@ -39,11 +39,11 @@ const TransportStackView: React.FC = () => {
     <TransportStackViewContext.Provider
       value={{ availableTransport, changeTransportType }}
     >
-      {/* Stack -  */}
+      {/* Stack - Vehicle Info and TransportVehicleTabView */}
       <Stack.Navigator initialRouteName={TransportViewStackNameEnum.vehicle}>
         <Stack.Screen
           name={TransportViewStackNameEnum.vehicle}
-          component={TransportVehicleNavView}
+          component={TransportVehicleTabView}
           options={{
             title: t(TransportStackViewTitleNames.map),
             headerShown: false,

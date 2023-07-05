@@ -6,19 +6,7 @@
 
 # TransportCo
 
-#### Custom Checkbox
-
-#### Custom Marker (one per each vehicle type)
-
-#### Custom Text Component \*\* ({size}) => <Text/>
-
-#### Custom Divider
-
-#### Common Drivers Info Component
-
-### STRUCTURE
-
-#### Two Views - Transport + Settings
+### STRUCTURE - two Views "Transport" and "Settings"
 
 #### Settings - user able to change localisation by toggling switch
 

@@ -21,9 +21,11 @@ const TabView: React.FC = () => {
 
   return (
     <View style={{ flex: 1 }}>
+      {/* title */}
       <CustomText align="center" size="medium">
         {APP_TITLE}
       </CustomText>
+      {/* two tabs - Settings and Transport */}
       <NavigationContainer>
         <Tab.Navigator initialRouteName={TabViewRouteNamesEnum.transport}>
           <Tab.Screen
