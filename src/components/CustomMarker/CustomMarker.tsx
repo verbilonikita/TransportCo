@@ -1,16 +1,14 @@
-import { Pressable, TouchableOpacity } from "react-native";
-import { TransportTypeEnum } from "../../constants";
-import { IVehicleMarkerSettings } from "./CustomMarker.consts";
 import { memo } from "react";
-
 import { Marker } from "react-native-maps";
-import MAIcons from "@expo/vector-icons/MaterialCommunityIcons";
+// types
 import { IDriver } from "../../types";
 // utils
 import { getVehicleType } from "./CustomMarker.utils";
+// icons
+import { MAIcons } from "../../utilities/icons";
 
 interface ICustomMarkerProps {
-  handleVehicleClick?: (el: any) => void;
+  handleVehicleClick?: (driver: IDriver) => void;
   driver: IDriver;
 }
 const CustomMarker: React.FC<ICustomMarkerProps> = ({

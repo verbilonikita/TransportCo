@@ -21,7 +21,7 @@ const TransportInfoView: React.FC<any> = ({ route: { params: driver } }) => {
         >
           <CustomMarker driver={driver} />
         </MapView>
-        <DriversInfo />
+        <DriversInfo driver={driver} />
         <ButtonsHub />
       </View>
     </TransportInfoViewContext.Provider>

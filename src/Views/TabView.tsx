@@ -5,13 +5,15 @@ import { Tab } from "./TabView.utils";
 // icons
 import { AntDesignIcons, EvilIcons } from "../utilities/icons";
 // views
-import HomeView from "./HomeView/HomeView";
 import SettingsView from "./SettingsView/SettingsView";
+import TransportTabView from "./TransportTabView/TransportTabView";
 // localisation
 import { useTranslation } from "react-i18next";
 // consts
 import { TabViewRouteNamesEnum, TabViewTitlesEnum } from "./TabView.consts";
+import { APP_TITLE } from "../constants";
 import { View } from "react-native";
+// components
 import CustomText from "../components/CustomText/CustomText";
 
 const TabView: React.FC = () => {
@@ -20,7 +22,7 @@ const TabView: React.FC = () => {
   return (
     <View style={{ flex: 1 }}>
       <CustomText align="center" size="medium">
-        TransportCo
+        {APP_TITLE}
       </CustomText>
       <NavigationContainer>
         <Tab.Navigator initialRouteName={TabViewRouteNamesEnum.transport}>
@@ -31,7 +33,7 @@ const TabView: React.FC = () => {
               headerShown: false,
             }}
             name={TabViewRouteNamesEnum.transport}
-            component={HomeView}
+            component={TransportTabView}
           />
           <Tab.Screen
             options={{

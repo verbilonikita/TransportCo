@@ -2,23 +2,23 @@ import { Button, View } from "react-native";
 import { memo, useContext, useMemo, useState } from "react";
 
 // components
-import CustomCheckbox from "../../../../components/CustomCheckbox/CustomCheckbox";
-import CustomCheckboxProvider from "../../../../components/CustomCheckbox/CustomCheckboxProvider";
+import CustomCheckbox from "../../../../../components/CustomCheckbox/CustomCheckbox";
+import CustomCheckboxProvider from "../../../../../components/CustomCheckbox/CustomCheckboxProvider";
 // consts
-import { TransportTypeEnum } from "../../../../constants";
-// utils
-import { TransportMapViewContext } from "../TransportMapView.utils";
+import { TransportTypeEnum } from "../../../../../constants";
+
 // styles
 import { FilterButtonsStyles } from "./FilterButtons.styles";
 // localisation
 import { useTranslation } from "react-i18next";
+import { TransportTabViewContext } from "../../../TransportTabView.utils";
 
 const FilterModalView: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [checkboxState, setCheckboxState] = useState(TransportTypeEnum.all);
 
-  const { changeTransportType } = useContext(TransportMapViewContext);
+  const { changeTransportType } = useContext(TransportTabViewContext);
 
   const handlePress = () => changeTransportType?.(checkboxState);
 
@@ -34,7 +34,7 @@ const FilterModalView: React.FC = () => {
           />
         );
       }),
-    []
+    [i18n.language]
   );
 
   return (

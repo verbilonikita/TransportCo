@@ -1,7 +1,8 @@
-import { Pressable, Text, View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Text, View } from "react-native";
 import { TransportTypeEnum } from "../../constants";
 import { CustomCheckboxStyles } from "./CustomCheckbox.styles";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { Ionicons } from "../../utilities/icons";
 
 interface ICustomCheckbox {
   title: TransportTypeEnum;
@@ -26,7 +27,7 @@ const CustomCheckbox: React.FC<ICustomCheckbox> = ({
 
   return (
     <View style={CustomCheckboxStyles.container}>
-      <Pressable
+      <TouchableOpacity
         style={[
           CustomCheckboxStyles.checkboxBase,
           checkboxState === value && CustomCheckboxStyles.checkboxChecked,
@@ -34,7 +35,7 @@ const CustomCheckbox: React.FC<ICustomCheckbox> = ({
         onPress={handleClick}
       >
         {checkboxState && <Ionicons name="checkmark" size={15} color="white" />}
-      </Pressable>
+      </TouchableOpacity>
       <Text>{title}</Text>
     </View>
   );

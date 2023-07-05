@@ -7,7 +7,9 @@ export enum TransportTypeEnum {
   special = "special",
 }
 
-export enum HomeViewStackNameEnum {
-  map = "TransportMap",
+export enum TransportViewStackNameEnum {
+  vehicle = "TransportMap",
   info = "TransportInfo",
 }
+
+export const APP_TITLE = "TransportCo";

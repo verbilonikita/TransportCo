@@ -1,6 +1,10 @@
 export const LANGUAGE_RESOURCES = {
   EN: {
     translation: {
+      transport_vehicle_nav: {
+        list: "List",
+        map: "Map",
+      },
       vehicle_types: {
         cargo: "Cargo",
         public: "Pass",
@@ -36,6 +40,10 @@ export const LANGUAGE_RESOURCES = {
   },
   РУ: {
     translation: {
+      transport_vehicle_nav: {
+        list: "Список",
+        map: "Карта",
+      },
       vehicle_types: {
         cargo: "Груз",
         public: "Пасс",

@@ -1,13 +1,11 @@
-import { useContext } from "react";
 import { View } from "react-native";
-import { TransportInfoViewContext } from "../TransportInfoView.utils";
 import CustomText from "../../../../components/CustomText/CustomText";
 import { DriversInfoStyles } from "./DriversInfo.styles";
 import { useTranslation } from "react-i18next";
+import { IDriver } from "../../../../types";
 
-const DriversInfo = () => {
+const DriversInfo: React.FC<{ driver: IDriver }> = ({ driver }) => {
   const { t } = useTranslation();
-  const { driver } = useContext(TransportInfoViewContext);
   return (
     <View style={{ padding: 10, gap: 20 }}>
       <View style={DriversInfoStyles.row}>

@@ -1,4 +1,4 @@
-import React, { cloneElement, memo, useState } from "react";
+import React, { cloneElement, memo } from "react";
 import { View } from "react-native";
 import { TransportTypeEnum } from "../../constants";
 
