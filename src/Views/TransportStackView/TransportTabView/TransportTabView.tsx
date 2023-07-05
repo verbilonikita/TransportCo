@@ -9,6 +9,7 @@ import {
 } from "./TransportTabView.consts";
 import { useTranslation } from "react-i18next";
 import { TransportStackNameEnum } from "../../../constants";
+import { useCallback, useMemo } from "react";
 
 interface ITrabsportVehicleTabProps {
   navigation: TransportStackPropType;
@@ -19,12 +20,18 @@ const TrabsportVehicleTab: React.FC<ITrabsportVehicleTabProps> = ({
 }) => {
   const { t } = useTranslation();
 
-  const navigateToInfo = (driver: IDriver) => {
+  const navigateToInfo = useCallback((driver: IDriver) => {
     navigation.navigate(TransportStackNameEnum.info, driver);
-  };
+  }, []);
+
+  const context = useMemo(() => {
+    return {
+      navigateToInfo,
+    };
+  }, []);
 
   return (
-    <TransportVehicleTabViewContext.Provider value={{ navigateToInfo }}>
+    <TransportVehicleTabViewContext.Provider value={context}>
       {/* Displays List of Users  */}
       <Tab.Navigator>
         <Tab.Screen

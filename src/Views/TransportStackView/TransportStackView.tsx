@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { IDriver, IDriversResponse } from "../../types";
 import { TransportStackNameEnum, TransportTypeEnum } from "../../constants";
 import transports from "../../../assets/transport.json";
@@ -35,10 +35,15 @@ const TransportStackView: React.FC = () => {
     setTransportType(type);
   };
 
+  const context = useMemo(() => {
+    return {
+      availableTransport,
+      changeTransportType,
+    };
+  }, [availableTransport]);
+
   return (
-    <TransportStackViewContext.Provider
-      value={{ availableTransport, changeTransportType }}
-    >
+    <TransportStackViewContext.Provider value={context}>
       {/* Stack - Vehicle Info and TransportVehicleTabView */}
       <Stack.Navigator initialRouteName={TransportStackNameEnum.transport}>
         <Stack.Screen
