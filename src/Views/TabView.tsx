@@ -10,7 +10,7 @@ import TransportStackView from "./TransportStackView/TransportStackView";
 // localisation
 import { useTranslation } from "react-i18next";
 // consts
-import { TabViewRouteNamesEnum, TabViewTitlesEnum } from "./TabView.consts";
+import { TabViewNamesEnum, TabViewTitlesEnum } from "./TabView.consts";
 import { APP_TITLE } from "../constants";
 import { View } from "react-native";
 // components
@@ -27,14 +27,14 @@ const TabView: React.FC = () => {
       </CustomText>
       {/* two tabs - Settings and Transport */}
       <NavigationContainer>
-        <Tab.Navigator initialRouteName={TabViewRouteNamesEnum.transport}>
+        <Tab.Navigator initialRouteName={TabViewNamesEnum.transport}>
           <Tab.Screen
             options={{
               tabBarLabel: `${t(TabViewTitlesEnum.transport)}`,
               tabBarIcon: (props) => <AntDesignIcons name="car" {...props} />,
               headerShown: false,
             }}
-            name={TabViewRouteNamesEnum.transport}
+            name={TabViewNamesEnum.transport}
             component={TransportStackView}
           />
           <Tab.Screen
@@ -43,7 +43,7 @@ const TabView: React.FC = () => {
               tabBarIcon: (props) => <EvilIcons name="gear" {...props} />,
               headerShown: false,
             }}
-            name={TabViewRouteNamesEnum.settings}
+            name={TabViewNamesEnum.settings}
             component={SettingsView}
           />
         </Tab.Navigator>

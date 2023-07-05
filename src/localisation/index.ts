@@ -21,6 +21,7 @@ export const LANGUAGE_RESOURCES = {
             title: "Available Transport",
           },
           driver_info: {
+            id: "id",
             title: "Vehicle Information",
             name: "Name",
             category: "Category",
@@ -60,6 +61,7 @@ export const LANGUAGE_RESOURCES = {
             title: "Доступный транспорт",
           },
           driver_info: {
+            id: "ИД",
             title: "Информация о ТС",
             name: "Имя",
             category: "Категория",

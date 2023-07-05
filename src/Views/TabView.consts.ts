@@ -1,4 +1,4 @@
-enum TabViewRouteNamesEnum {
+enum TabViewNamesEnum {
   transport = "transport",
   settings = "settings",
 }
@@ -8,4 +8,4 @@ enum TabViewTitlesEnum {
   settings = "tab_btns.settings",
 }
 
-export { TabViewRouteNamesEnum, TabViewTitlesEnum };
+export { TabViewNamesEnum, TabViewTitlesEnum };

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IDriver, IDriversResponse } from "../../types";
-import { TransportTypeEnum, TransportViewStackNameEnum } from "../../constants";
+import { TransportStackNameEnum, TransportTypeEnum } from "../../constants";
 import transports from "../../../assets/transport.json";
 import { useTranslation } from "react-i18next";
 import {
@@ -8,7 +8,7 @@ import {
   TransportStackViewTitleNames,
 } from "./TransportStackView.consts";
 import TransportInfoView from "./TransportInfoView/TransportInfoView";
-import TransportVehicleTabView from "./TransportVehicleTabView/TransportVehicleTabView";
+import TransportVehicleTabView from "./TransportTabView/TransportTabView";
 import { Stack, TransportStackViewContext } from "./TransportStackView.utils";
 
 const TransportStackView: React.FC = () => {
@@ -40,9 +40,9 @@ const TransportStackView: React.FC = () => {
       value={{ availableTransport, changeTransportType }}
     >
       {/* Stack - Vehicle Info and TransportVehicleTabView */}
-      <Stack.Navigator initialRouteName={TransportViewStackNameEnum.vehicle}>
+      <Stack.Navigator initialRouteName={TransportStackNameEnum.transport}>
         <Stack.Screen
-          name={TransportViewStackNameEnum.vehicle}
+          name={TransportStackNameEnum.transport}
           component={TransportVehicleTabView}
           options={{
             title: t(TransportStackViewTitleNames.map),
@@ -50,7 +50,7 @@ const TransportStackView: React.FC = () => {
           }}
         />
         <Stack.Screen
-          name={TransportViewStackNameEnum.info}
+          name={TransportStackNameEnum.info}
           component={TransportInfoView}
           options={{
             title: t(TransportStackViewTitleNames.info),

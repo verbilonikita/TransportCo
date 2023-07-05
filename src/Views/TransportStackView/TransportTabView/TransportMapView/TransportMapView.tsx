@@ -5,7 +5,7 @@ import { MoscowRegion } from "./TransportMapView.consts";
 import CustomMarker from "../../../../components/CustomMarker/CustomMarker";
 import { IDriver } from "../../../../types";
 import FilterModalView from "./FilterButtons/FilterButtons";
-import { TransportVehicleTabViewContext } from "../TransportVehicleTabView.utils";
+import { TransportVehicleTabViewContext } from "../TransportTabView.utils";
 import { TransportStackViewContext } from "../../TransportStackView.utils";
 
 const TransportMapView: React.FC = () => {

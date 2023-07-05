@@ -5,7 +5,7 @@ import { TransportStackViewContext } from "../../TransportStackView.utils";
 import DriversInfo from "../../../../components/DriversInfo/DriversInfo";
 import Divider from "../../../../components/Divider/Divider";
 // context
-import { TransportVehicleTabViewContext } from "../TransportVehicleTabView.utils";
+import { TransportVehicleTabViewContext } from "../TransportTabView.utils";
 
 const TransportListView: React.FC = () => {
   const { availableTransport } = useContext(TransportStackViewContext);
@@ -16,7 +16,10 @@ const TransportListView: React.FC = () => {
     <View style={{ flex: 1 }}>
       <ScrollView>
         {availableTransport?.map((driver, i) => (
-          <TouchableOpacity onPress={() => navigateToInfo?.(driver)}>
+          <TouchableOpacity
+            onPress={() => navigateToInfo?.(driver)}
+            key={driver.id}
+          >
             <DriversInfo driver={driver} />
             {i != availableTransport.length - 1 && <Divider />}
           </TouchableOpacity>
