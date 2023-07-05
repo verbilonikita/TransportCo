@@ -6,7 +6,7 @@
 
 # TransportCo
 
-### STRUCTURE - two Views "Transport" and "Settings"
+### STRUCTURE - two Views "Transport" and "Settings", tabs
 
 #### Settings - user able to change localisation by toggling switch
 
