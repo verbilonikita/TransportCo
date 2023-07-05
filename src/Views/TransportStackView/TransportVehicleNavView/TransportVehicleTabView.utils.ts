@@ -8,8 +8,8 @@ interface ITransportVehicleNavView {
   navigateToInfo?: (driver: IDriver) => void;
 }
 
-const TransportVehicleNavViewContext = createContext<ITransportVehicleNavView>(
+const TransportVehicleTabViewContext = createContext<ITransportVehicleNavView>(
   {}
 );
 
-export { Tab, TransportVehicleNavViewContext };
+export { Tab, TransportVehicleTabViewContext };

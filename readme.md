@@ -1,28 +1,34 @@
 ** В основном пишу на SWIFT, поэтому тестировал на IOS, т.к все под IOS уже было настроено, на андроид протестировать не успел. **
 
-Построил простую удобную архитектуру, поразбивал большую часть кода на модули, повыносил стринги в енумы и тд. Возможно что-то не заметил, времени было мало, но в целом все выглядит хорошо :)
+Построил простую удобную архитектуру, поразбивал большую часть кода на модули, повыносил стринги в енумы и тд. Можно и дальше рефакторить, выносить все в отдельные компоненты, но к сожалению уже не было времени. Архитектура есть, понятная, и простая.
 
 # TransportCo
 
-## Custom Checkbox
+#### Custom Checkbox
 
-### Custom Marker (one per each vehicle type)
+#### Custom Marker (one per each vehicle type)
 
-### Custom Text Component \*\* ({size}) => <Text/>
+#### Custom Text Component \*\* ({size}) => <Text/>
 
-## STRUCTURE
+#### Custom Divider
 
-## Two Views - Home + Settings
+#### Common Drivers Info Component
 
-## Settings - change localisation using i18n
+### STRUCTURE
 
-#### Home
+#### Two Views - Transport + Settings
 
-1. NavigationStack with Two Screens - TransportMap + TransportInfo
-2. NavigationMap shows Map with Markers and allows to switch vehicle type on "OK" - if no checkbox is selected, then it shows all transports (press OK).
-3. Markers are clickable - it changes View From Map to Info.
+#### Settings - user able to change localisation by toggling switch
 
-4. Info consists of 3 Components
+#### Transport
+
+1. NavigationStack: List and TransportVehicleNav.
+2. List - (TransparentOpacity) buttons for each vehicle that leads to
+3. NavigationStack with Two Screens - TransportMap + TransportInfo
+4. NavigationMap shows Map with Markers and allows to switch vehicle type on "OK" - if no checkbox is selected, then it shows all transports (press OK).
+5. Markers are clickable - it changes View From Map to Info.
+
+6. Info consists of 3 Components
 
 a. Map (to show current location of the driver)
 b. Short Info about the driver.

@@ -4,14 +4,14 @@ import { TransportTypeEnum, TransportViewStackNameEnum } from "../../constants";
 import transports from "../../../assets/transport.json";
 import { useTranslation } from "react-i18next";
 import {
-  TransportTabViewOther,
-  TransportTabViewTitleNames,
-} from "./TransportTabView.consts";
+  TransportStackViewOther,
+  TransportStackViewTitleNames,
+} from "./TransportStackView.consts";
 import TransportInfoView from "./TransportInfoView/TransportInfoView";
-import TransportVehicleNavView from "./TransportVehicleNavView/TransportVehicleNavView";
-import { Stack, TransportTabViewContext } from "./TransportTabView.utils";
+import TransportVehicleNavView from "./TransportVehicleNavView/TransportVehicleTabView";
+import { Stack, TransportStackViewContext } from "./TransportStackView.utils";
 
-const TransportTabView: React.FC = () => {
+const TransportStackView: React.FC = () => {
   const { t } = useTranslation();
 
   const [availableTransport, setAvailableTransport] = useState<any[]>([]);
@@ -36,7 +36,7 @@ const TransportTabView: React.FC = () => {
   };
 
   return (
-    <TransportTabViewContext.Provider
+    <TransportStackViewContext.Provider
       value={{ availableTransport, changeTransportType }}
     >
       <Stack.Navigator initialRouteName={TransportViewStackNameEnum.vehicle}>
@@ -44,7 +44,7 @@ const TransportTabView: React.FC = () => {
           name={TransportViewStackNameEnum.vehicle}
           component={TransportVehicleNavView}
           options={{
-            title: t(TransportTabViewTitleNames.map),
+            title: t(TransportStackViewTitleNames.map),
             headerShown: false,
           }}
         />
@@ -52,13 +52,13 @@ const TransportTabView: React.FC = () => {
           name={TransportViewStackNameEnum.info}
           component={TransportInfoView}
           options={{
-            title: t(TransportTabViewTitleNames.info),
-            headerBackTitle: t(TransportTabViewOther.button),
+            title: t(TransportStackViewTitleNames.info),
+            headerBackTitle: t(TransportStackViewOther.button),
           }}
         />
       </Stack.Navigator>
-    </TransportTabViewContext.Provider>
+    </TransportStackViewContext.Provider>
   );
 };
 
-export default TransportTabView;
+export default TransportStackView;

@@ -6,7 +6,7 @@ import { Tab } from "./TabView.utils";
 import { AntDesignIcons, EvilIcons } from "../utilities/icons";
 // views
 import SettingsView from "./SettingsView/SettingsView";
-import TransportTabView from "./TransportTabView/TransportTabView";
+import TransportStackView from "./TransportStackView/TransportStackView";
 // localisation
 import { useTranslation } from "react-i18next";
 // consts
@@ -33,7 +33,7 @@ const TabView: React.FC = () => {
               headerShown: false,
             }}
             name={TabViewRouteNamesEnum.transport}
-            component={TransportTabView}
+            component={TransportStackView}
           />
           <Tab.Screen
             options={{

@@ -5,13 +5,13 @@ import { MoscowRegion } from "./TransportMapView.consts";
 import CustomMarker from "../../../../components/CustomMarker/CustomMarker";
 import { IDriver } from "../../../../types";
 import FilterModalView from "./FilterButtons/FilterButtons";
-import { TransportVehicleNavViewContext } from "../TransportVehicleNavView.utils";
-import { TransportTabViewContext } from "../../TransportTabView.utils";
+import { TransportVehicleTabViewContext } from "../TransportVehicleTabView.utils";
+import { TransportStackViewContext } from "../../TransportStackView.utils";
 
 const TransportMapView: React.FC = () => {
-  const { availableTransport } = useContext(TransportTabViewContext);
+  const { availableTransport } = useContext(TransportStackViewContext);
 
-  const { navigateToInfo } = useContext(TransportVehicleNavViewContext);
+  const { navigateToInfo } = useContext(TransportVehicleTabViewContext);
 
   const handleVehicleClick = useCallback(
     (driver: IDriver) => navigateToInfo?.(driver),

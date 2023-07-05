@@ -1,15 +1,15 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import { createContext, useContext } from "react";
+import { createContext } from "react";
 import { IDriver } from "../../types";
 import { TransportTypeEnum } from "../../constants";
 
 const Stack = createStackNavigator();
 
-interface ITransportTabViewContext {
+interface ITransportStackViewContext {
   availableTransport?: IDriver[];
   changeTransportType?: (type: TransportTypeEnum) => void;
 }
 
-const TransportTabViewContext = createContext<ITransportTabViewContext>({});
+const TransportStackViewContext = createContext<ITransportStackViewContext>({});
 
-export { Stack, TransportTabViewContext };
+export { Stack, TransportStackViewContext };

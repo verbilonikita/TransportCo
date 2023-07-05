@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import { TouchableOpacity, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import { TransportTabViewContext } from "../../TransportTabView.utils";
+import { TransportStackViewContext } from "../../TransportStackView.utils";
 import DriversInfo from "../../../../components/DriversInfo/DriversInfo";
 import Divider from "../../../../components/Divider/Divider";
-import { TransportVehicleNavViewContext } from "../TransportVehicleNavView.utils";
+// context
+import { TransportVehicleTabViewContext } from "../TransportVehicleTabView.utils";
 
-const TransportListView: React.FC<any> = ({ navigation }) => {
-  const { availableTransport } = useContext(TransportTabViewContext);
-  const { navigateToInfo } = useContext(TransportVehicleNavViewContext);
+const TransportListView: React.FC = () => {
+  const { availableTransport } = useContext(TransportStackViewContext);
+  const { navigateToInfo } = useContext(TransportVehicleTabViewContext);
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>

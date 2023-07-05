@@ -3,8 +3,8 @@ import { TransportViewStackNameEnum } from "../../../constants";
 import { IDriver } from "../../../types";
 
 export type TransportViewStackParamList = {
-  TransportMap: undefined; // No parameters for TransportMap route
-  TransportInfo: IDriver; // Requires a driver parameter for TransportInfo route
+  TransportMap: undefined;
+  TransportInfo: IDriver;
 };
 
 export type TransportVehicleNavigationPropType = StackNavigationProp<

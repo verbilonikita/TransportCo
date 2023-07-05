@@ -4,20 +4,20 @@ import TransportListView from "./TransportListView/TransportListView";
 import TransportMapView from "./TransportMapView/TransportMapView";
 import {
   Tab,
-  TransportVehicleNavViewContext,
-} from "./TransportVehicleNavView.utils";
-import { TransportVehicleNavigationPropType } from "./TransportVehicleNav.types";
+  TransportVehicleTabViewContext,
+} from "./TransportVehicleTabView.utils";
+import { TransportVehicleNavigationPropType } from "./TransportVehicleTab.types";
 import {
-  TransportVehicleNavNamesEnum,
-  TransportVehicleNavTitlesEnum,
-} from "./TransportVehicleNav.consts";
+  TransportVehicleTabNamesEnum,
+  TransportVehicleTabTitlesEnum,
+} from "./TransportVehicleTab.consts";
 import { useTranslation } from "react-i18next";
 
-interface ITransportVehicleNavViewProps {
+interface ITrabsportVehicleTabProps {
   navigation: TransportVehicleNavigationPropType;
 }
 
-const TransportVehicleNavView: React.FC<ITransportVehicleNavViewProps> = ({
+const TrabsportVehicleTab: React.FC<ITrabsportVehicleTabProps> = ({
   navigation,
 }) => {
   const { t } = useTranslation();
@@ -27,25 +27,25 @@ const TransportVehicleNavView: React.FC<ITransportVehicleNavViewProps> = ({
   };
 
   return (
-    <TransportVehicleNavViewContext.Provider value={{ navigateToInfo }}>
+    <TransportVehicleTabViewContext.Provider value={{ navigateToInfo }}>
       <Tab.Navigator>
         <Tab.Screen
           options={{
-            title: t(TransportVehicleNavTitlesEnum.list),
+            title: t(TransportVehicleTabTitlesEnum.list),
           }}
-          name={TransportVehicleNavNamesEnum.list}
+          name={TransportVehicleTabNamesEnum.list}
           component={TransportListView}
         />
         <Tab.Screen
           options={{
-            title: t(TransportVehicleNavTitlesEnum.map),
+            title: t(TransportVehicleTabTitlesEnum.map),
           }}
-          name={TransportVehicleNavNamesEnum.map}
+          name={TransportVehicleTabNamesEnum.map}
           component={TransportMapView}
         />
       </Tab.Navigator>
-    </TransportVehicleNavViewContext.Provider>
+    </TransportVehicleTabViewContext.Provider>
   );
 };
 
-export default TransportVehicleNavView;
+export default TrabsportVehicleTab;

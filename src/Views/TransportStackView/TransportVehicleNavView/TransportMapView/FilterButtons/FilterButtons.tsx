@@ -11,14 +11,14 @@ import { TransportTypeEnum } from "../../../../../constants";
 import { FilterButtonsStyles } from "./FilterButtons.styles";
 // localisation
 import { useTranslation } from "react-i18next";
-import { TransportTabViewContext } from "../../../TransportTabView.utils";
+import { TransportStackViewContext } from "../../../TransportStackView.utils";
 
 const FilterModalView: React.FC = () => {
   const { t, i18n } = useTranslation();
 
   const [checkboxState, setCheckboxState] = useState(TransportTypeEnum.all);
 
-  const { changeTransportType } = useContext(TransportTabViewContext);
+  const { changeTransportType } = useContext(TransportStackViewContext);
 
   const handlePress = () => changeTransportType?.(checkboxState);
 
