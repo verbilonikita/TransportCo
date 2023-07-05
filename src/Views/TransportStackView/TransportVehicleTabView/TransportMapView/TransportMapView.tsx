@@ -18,6 +18,7 @@ const TransportMapView: React.FC = () => {
     []
   );
 
+  // Each Marker is clickable
   return (
     <View style={{ flex: 1, position: "relative" }}>
       <FilterModalView />

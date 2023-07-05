@@ -39,6 +39,7 @@ const TransportStackView: React.FC = () => {
     <TransportStackViewContext.Provider
       value={{ availableTransport, changeTransportType }}
     >
+      {/* Stack -  */}
       <Stack.Navigator initialRouteName={TransportViewStackNameEnum.vehicle}>
         <Stack.Screen
           name={TransportViewStackNameEnum.vehicle}

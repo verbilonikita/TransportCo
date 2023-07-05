@@ -10,6 +10,8 @@ import { TransportVehicleTabViewContext } from "../TransportVehicleTabView.utils
 const TransportListView: React.FC = () => {
   const { availableTransport } = useContext(TransportStackViewContext);
   const { navigateToInfo } = useContext(TransportVehicleTabViewContext);
+
+  // Each user is clickable
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>

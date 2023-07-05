@@ -2,6 +2,8 @@
 
 Построил простую удобную архитектуру, поразбивал большую часть кода на модули, повыносил стринги в енумы и тд. Можно и дальше рефакторить, выносить все в отдельные компоненты, но к сожалению уже не было времени. Архитектура есть, понятная, и простая.
 
+В принципе все организовано, но возможно что-то упустил впопыхах. :)
+
 # TransportCo
 
 #### Custom Checkbox
@@ -22,14 +24,17 @@
 
 #### Transport
 
-1. NavigationStack: List and TransportVehicleNav.
-2. List - (TransparentOpacity) buttons for each vehicle that leads to
-3. NavigationStack with Two Screens - TransportMap + TransportInfo
-4. NavigationMap shows Map with Markers and allows to switch vehicle type on "OK" - if no checkbox is selected, then it shows all transports (press OK).
-5. Markers are clickable - it changes View From Map to Info.
+1. NavigationStack: "TransportVehicleTab" and "Info".
 
-6. Info consists of 3 Components
+##### TransportStackView
 
-a. Map (to show current location of the driver)
-b. Short Info about the driver.
-c. BtnHub - Two buttons that allow to call || message user in whatsapp.
+1. TransportVehicleTab with Two Tabs - TransportMap + TransportList
+2. TransportList - clickable elements with vehicle (driver) description
+3. TransportMap - map with markers, displays current location of driver. Markers are clickable.
+4. Both clickable elements lead to "Info" page
+
+##### Info
+
+1. Displays map with current location of driver.
+2. Provides info about driver.
+3. Two buttons - call and whatsapp message.
